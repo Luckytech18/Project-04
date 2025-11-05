@@ -2,7 +2,7 @@ package in.rays.co.proj4.bean;
 
 import java.util.Date;
 
-public class UserBean {
+public class UserBean extends BaseBean {
 
 	private String firstName;
 	private String lastName;
@@ -13,6 +13,7 @@ public class UserBean {
 	private String mobileNo;
 	private long roleId;
 	private String gender;
+	
 	public String getFirstName() {
 		return firstName;
 	}
