@@ -2,7 +2,7 @@ package in.rays.co.proj4.bean;
 
 import java.util.Date;
 
-public class MarksheetBean {
+public class MarksheetBean extends BaseBean {
 	
 	private String rollNo;
 	private long studentId;

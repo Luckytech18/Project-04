@@ -2,7 +2,7 @@ package in.rays.co.proj4.bean;
 
 import java.util.Date;
 
-public class TimetableBean {
+public class TimetableBean extends BaseBean {
 	
 	private String semester;
 	private String description;

@@ -1,12 +1,14 @@
 package in.rays.co.proj4.bean;
 
-public class collegeBean {
+public class CollegeBean extends BaseBean {
 	
 	private String name;
 	private String address;
 	private String state;
 	private String city;
 	private String phoneNo;
+	
+	
 	public String getName() {
 		return name;
 	}

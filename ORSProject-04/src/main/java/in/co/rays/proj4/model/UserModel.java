@@ -68,6 +68,7 @@ public class UserModel {
 			pstmt.setTimestamp(12, bean.getCreatedDatetime());
 			pstmt.setTimestamp(13, bean.getModifiedDatetime());
 			pstmt.executeUpdate();
+			
 			conn.commit();
 			pstmt.close();
 		} catch (Exception e) {
@@ -91,7 +92,7 @@ public class UserModel {
 
 		UserBean beanExist = findByLogin(bean.getLogin());
 
-		if (beanExist != null && !(beanExist.getId() == bean.getId())) {
+		if (beanExist != null && (beanExist.getId() != bean.getId())) {
 			throw new DuplicateRecordException("Login Id is already exist");
 		}
 

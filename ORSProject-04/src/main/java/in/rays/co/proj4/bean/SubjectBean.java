@@ -1,6 +1,6 @@
 package in.rays.co.proj4.bean;
 
-public class SubjectBean {
+public class SubjectBean extends BaseBean {
 	
 	private String name;
 	private long courseId;
