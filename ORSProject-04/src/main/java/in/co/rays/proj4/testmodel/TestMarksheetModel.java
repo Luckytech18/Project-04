@@ -19,8 +19,8 @@ public class TestMarksheetModel {
 		MarksheetBean bean = new MarksheetBean();
 		MarksheetModel model = new MarksheetModel();
 
-		bean.setRollNo("18");
-		bean.setStudentId(2);
+		bean.setRollNo("19");
+		bean.setStudentId(1);
 		bean.setPhysics(50);
 		bean.setChemistry(50);
 		bean.setMaths(50);

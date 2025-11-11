@@ -55,9 +55,7 @@ public class MarksheetModel {
 		if (duplicateMarksheet != null ) {
 			throw new DuplicateRecordException("Roll Number already exists");
 		}
-		if (bean.getStudentId() == studentbean.getId() ) {
-			throw new ApplicationException("Student id could not be same");
-		}
+	
 
 		
 
