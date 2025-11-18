@@ -5,19 +5,19 @@ import java.text.SimpleDateFormat;
 import java.util.Iterator;
 import java.util.List;
 
+import in.co.rays.proj4.bean.FacultyBean;
+import in.co.rays.proj4.exception.ApplicationException;
+import in.co.rays.proj4.exception.DuplicateRecordException;
 import in.co.rays.proj4.model.FacultyModel;
-import in.rays.co.proj4.bean.FacultyBean;
-import in.rays.co.proj4.exception.ApplicationException;
-import in.rays.co.proj4.exception.DuplicateRecordException;
 
 public class TestFacultyModel {
 
 	public static void main(String[] args) throws ParseException {
 
-		// testAdd();
+		 testAdd();
 		// testUpdate();
 		// testDelete();
-		testSearch();
+		//testSearch();
 	}
 
 	public static void testAdd() throws ParseException {
@@ -31,7 +31,7 @@ public class TestFacultyModel {
 		bean.setDob(sdf.parse("2002-06-16"));
 		bean.setGender("male");
 		bean.setMobileNo("1234567890");
-		bean.setEmail("sky@gmail.com");
+		bean.setEmail("sk@gmail.com");
 		bean.setCollegeId(1);
 		bean.setSubjectId(1);
 		bean.setCourseId(1);
@@ -47,7 +47,7 @@ public class TestFacultyModel {
 
 		FacultyModel model = new FacultyModel();
 		try {
-			FacultyBean bean = model.findByPk(1l);
+			FacultyBean bean = model.findByPk(2l);
 			bean.setFirstName("Surya");
 
 			model.update(bean);
@@ -62,7 +62,7 @@ public class TestFacultyModel {
 		FacultyModel model = new FacultyModel();
 		FacultyBean bean = null;
 		try {
-			bean = model.findByPk(1l);
+			bean = model.findByPk(2l);
 			model.delete(bean);
 		} catch (ApplicationException e) {
 			// TODO Auto-generated catch block

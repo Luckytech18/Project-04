@@ -11,32 +11,32 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import in.co.rays.proj4.bean.RoleBean;
+import in.co.rays.proj4.exception.ApplicationException;
+import in.co.rays.proj4.exception.DatabaseException;
+import in.co.rays.proj4.exception.DuplicateRecordException;
 import in.co.rays.proj4.model.RoleModel;
 import in.co.rays.proj4.utill.JDBCDataSource;
-import in.rays.co.proj4.bean.RoleBean;
-import in.rays.co.proj4.exception.ApplicationException;
-import in.rays.co.proj4.exception.DatabaseException;
-import in.rays.co.proj4.exception.DuplicateRecordException;
 
 public class TestRoleModel {
 
 	public static void main(String[] args) {
-		 testAdd();
-		// testUpdate();
-		// testDelete();
+		// testAdd();
+		 //testUpdate();
+		 //testDelete();
 		// testFindByPk();
 		//testFindByName();
-		//testSesarch();
+		testSesarch();
 	}
 
 	public static void testAdd() {
 
 		RoleBean bean = new RoleBean();
 		RoleModel model = new RoleModel();
-		bean.setName("kiosk");
-		bean.setDescription("kiosk");
-		bean.setCreatedBy("kiosk");
-		bean.setModifiedBy("kiosk");
+		bean.setName("HR");
+		bean.setDescription("HR");
+		bean.setCreatedBy("HR");
+		bean.setModifiedBy("HR");
 		bean.setCreatedDatetime(new Timestamp(new Date().getTime()));
 		bean.setModifiedDatetime(new Timestamp(new Date().getTime()));
 
@@ -57,8 +57,8 @@ public class TestRoleModel {
 		
 		RoleModel model = new RoleModel();
 		try {
-		RoleBean bean = model.findByPk(1L);
-			bean.setName("Admin");
+		RoleBean bean = model.findByPk(5L);
+			bean.setName("Manager");
 			
 			
 			model.update(bean);
@@ -72,7 +72,7 @@ public class TestRoleModel {
 		RoleBean bean = new RoleBean();
 		RoleModel model = new RoleModel();
 
-		bean.setId(1);
+		bean.setId(5);
 		try {
 			model.delete(bean);
 			System.out.println("deleted successfully");
@@ -119,7 +119,7 @@ public class TestRoleModel {
 
 			RoleBean bean = new RoleBean();
 			RoleModel model = new RoleModel();
-			bean.setName("hr");
+			
 			List list = model.search(bean, 0, 0);
 			if (list.size() < 0) {
 				System.out.println("Test search fail");

@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import in.co.rays.proj4.bean.SubjectBean;
+import in.co.rays.proj4.exception.ApplicationException;
+import in.co.rays.proj4.exception.DuplicateRecordException;
 import in.co.rays.proj4.model.SubjectModel;
-import in.rays.co.proj4.bean.SubjectBean;
-import in.rays.co.proj4.exception.ApplicationException;
-import in.rays.co.proj4.exception.DuplicateRecordException;
 
 public class TestSubjectModel {
 
 	public static void main(String[] args) {
 		// testAdd();
 		//testUpdate();
-		//testDelete();
-		testSearch();
+		testDelete();
+		//testSearch();
 	}
 
 	public static void testAdd() {
@@ -23,8 +23,8 @@ public class TestSubjectModel {
 		SubjectModel model = new SubjectModel();
 		SubjectBean bean = new SubjectBean();
 
-		bean.setId(1);
-		bean.setName("Bst");
+		bean.setId(5);
+		bean.setName("python");
 		bean.setCourseId(1);
 
 		try {
@@ -53,7 +53,7 @@ public class TestSubjectModel {
 
 		SubjectModel model = new SubjectModel();
 		try {
-			SubjectBean bean = model.findByPk(1l);
+			SubjectBean bean = model.findByPk(2l);
 
 			model.delete(bean);
 		} catch (ApplicationException e) {

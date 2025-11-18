@@ -5,17 +5,17 @@ import java.text.SimpleDateFormat;
 import java.util.Iterator;
 import java.util.List;
 
+import in.co.rays.proj4.bean.CourseBean;
+import in.co.rays.proj4.bean.FacultyBean;
+import in.co.rays.proj4.bean.MarksheetBean;
+import in.co.rays.proj4.bean.TimetableBean;
+import in.co.rays.proj4.exception.ApplicationException;
+import in.co.rays.proj4.exception.DatabaseException;
+import in.co.rays.proj4.exception.DuplicateRecordException;
 import in.co.rays.proj4.model.CourseModel;
 import in.co.rays.proj4.model.FacultyModel;
 import in.co.rays.proj4.model.MarksheetModel;
 import in.co.rays.proj4.model.TimetableModel;
-import in.rays.co.proj4.bean.CourseBean;
-import in.rays.co.proj4.bean.FacultyBean;
-import in.rays.co.proj4.bean.MarksheetBean;
-import in.rays.co.proj4.bean.TimetableBean;
-import in.rays.co.proj4.exception.ApplicationException;
-import in.rays.co.proj4.exception.DatabaseException;
-import in.rays.co.proj4.exception.DuplicateRecordException;
 
 public class TestTimeTable {
 

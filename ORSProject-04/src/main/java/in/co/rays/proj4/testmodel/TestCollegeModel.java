@@ -3,12 +3,14 @@ package in.co.rays.proj4.testmodel;
 import java.util.Iterator;
 import java.util.List;
 
+import in.co.rays.proj4.bean.CollegeBean;
+import in.co.rays.proj4.bean.StudentBean;
+import in.co.rays.proj4.bean.UserBean;
+import in.co.rays.proj4.exception.ApplicationException;
+import in.co.rays.proj4.exception.DuplicateRecordException;
 import in.co.rays.proj4.model.CollegeModel;
 import in.co.rays.proj4.model.RoleModel;
-import in.rays.co.proj4.bean.CollegeBean;
-import in.rays.co.proj4.bean.StudentBean;
-import in.rays.co.proj4.exception.ApplicationException;
-import in.rays.co.proj4.exception.DuplicateRecordException;
+import in.co.rays.proj4.model.UserModel;
 
 public class TestCollegeModel {
 
@@ -90,4 +92,18 @@ public class TestCollegeModel {
 		}
 
 	}
+	public static void testDelete() {
+		CollegeModel model = new CollegeModel();
+		
+		try {
+			CollegeBean bean = model.findByPk(1l);
+			model.delete(bean);
+		} catch (ApplicationException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
 }

@@ -3,11 +3,13 @@ package in.co.rays.proj4.testmodel;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+import in.co.rays.proj4.bean.StudentBean;
+import in.co.rays.proj4.bean.UserBean;
+import in.co.rays.proj4.exception.ApplicationException;
+import in.co.rays.proj4.exception.DuplicateRecordException;
 import in.co.rays.proj4.model.RoleModel;
 import in.co.rays.proj4.model.StudentModel;
-import in.rays.co.proj4.bean.StudentBean;
-import in.rays.co.proj4.exception.ApplicationException;
-import in.rays.co.proj4.exception.DuplicateRecordException;
+import in.co.rays.proj4.model.UserModel;
 
 public class TestStudentModel {
 
@@ -57,5 +59,17 @@ public class TestStudentModel {
 		}
 	}
 	
-
+	public static void testDelete() {
+		StudentModel model = new StudentModel();
+		
+		try {
+			StudentBean bean = model.findByPk(1l);
+			model.delete(bean);
+		} catch (ApplicationException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+	}
 }

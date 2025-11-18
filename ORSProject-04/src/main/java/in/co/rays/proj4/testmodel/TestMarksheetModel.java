@@ -1,9 +1,9 @@
 package in.co.rays.proj4.testmodel;
 
+import in.co.rays.proj4.bean.MarksheetBean;
+import in.co.rays.proj4.exception.ApplicationException;
+import in.co.rays.proj4.exception.DuplicateRecordException;
 import in.co.rays.proj4.model.MarksheetModel;
-import in.rays.co.proj4.bean.MarksheetBean;
-import in.rays.co.proj4.exception.ApplicationException;
-import in.rays.co.proj4.exception.DuplicateRecordException;
 
 public class TestMarksheetModel {
 
@@ -19,7 +19,7 @@ public class TestMarksheetModel {
 		MarksheetBean bean = new MarksheetBean();
 		MarksheetModel model = new MarksheetModel();
 
-		bean.setRollNo("19");
+		bean.setRollNo("20");
 		bean.setStudentId(1);
 		bean.setPhysics(50);
 		bean.setChemistry(50);

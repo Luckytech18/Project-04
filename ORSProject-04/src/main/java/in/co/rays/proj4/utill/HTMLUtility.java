@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
+import in.co.rays.proj4.bean.DropdownListBean;
 import in.co.rays.proj4.model.RoleModel;
-import in.rays.co.proj4.bean.DropdownListBean;
 
 public class HTMLUtility {
 
@@ -79,7 +79,7 @@ public class HTMLUtility {
 
 		List list = model.list();
 
-		String selectedValue = "1";
+		String selectedValue = "null";
 
 		String htmlSelectFromList = HTMLUtility.getList("role", selectedValue, list);
 
@@ -88,7 +88,7 @@ public class HTMLUtility {
 
 	public static void main(String[] args) throws Exception {
 
-		// testGetListByMap();
+		 //testGetListByMap();
 
 		testGetListByList();
 

@@ -4,23 +4,25 @@ import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
+import in.co.rays.proj4.bean.RoleBean;
+import in.co.rays.proj4.bean.UserBean;
+import in.co.rays.proj4.exception.ApplicationException;
+import in.co.rays.proj4.exception.DuplicateRecordException;
 import in.co.rays.proj4.model.RoleModel;
 import in.co.rays.proj4.model.UserModel;
-import in.rays.co.proj4.bean.RoleBean;
-import in.rays.co.proj4.bean.UserBean;
-import in.rays.co.proj4.exception.ApplicationException;
-import in.rays.co.proj4.exception.DuplicateRecordException;
 
 
 public class TestUserModel {
 
 	public static void main(String[] args) throws ParseException {
 
-		// testAdd();
+		 //testAdd();
 		//testUpdate();
-		//testDelete();
-		testAuthenticate();
+		testDelete();
+		//testAuthenticate();
 	}
 
 	public static void testAdd() throws ParseException {
@@ -30,9 +32,9 @@ public class TestUserModel {
 		UserBean bean = new UserBean();
 
 		try {
-			bean.setFirstName("lucky");
-			bean.setLastName("tomar");
-			bean.setLogin("lucky@gmail.com");
+			bean.setFirstName("amit");
+			bean.setLastName("sir");
+			bean.setLogin("amit@gmail.com");
 			bean.setPassword("123456");
 
 			bean.setDob(sdf.parse("2005-01-18"));
@@ -82,7 +84,7 @@ public class TestUserModel {
 		UserModel model = new UserModel();
 		
 		try {
-			UserBean bean = model.findByPk(1l);
+			UserBean bean = model.findByPk(2l);
 			model.delete(bean);
 		} catch (ApplicationException e) {
 			
@@ -105,5 +107,30 @@ public class TestUserModel {
 			e.printStackTrace();
 		}
 				
+	}
+	
+	public static void testSesarch() {
+
+		try {
+
+			UserBean bean = new UserBean();
+			UserModel model = new UserModel();
+			
+			List list = model.search(bean, 0, 0);
+			if (list.size() < 0) {
+				System.out.println("Test search fail");
+			}
+			Iterator<UserBean> it = list.iterator();
+			while (it.hasNext()) {
+				bean = (UserBean) it.next();
+				System.out.println(bean.getId());
+				System.out.println(bean.getFirstName());
+				System.out.println(bean.getLastName());
+			}
+		} catch (ApplicationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 }

@@ -3,11 +3,11 @@ package in.co.rays.proj4.testmodel;
 import java.util.Iterator;
 import java.util.List;
 
+import in.co.rays.proj4.bean.CourseBean;
+import in.co.rays.proj4.exception.ApplicationException;
+import in.co.rays.proj4.exception.DatabaseException;
+import in.co.rays.proj4.exception.DuplicateRecordException;
 import in.co.rays.proj4.model.CourseModel;
-import in.rays.co.proj4.bean.CourseBean;
-import in.rays.co.proj4.exception.ApplicationException;
-import in.rays.co.proj4.exception.DatabaseException;
-import in.rays.co.proj4.exception.DuplicateRecordException;
 
 public class TestCousreModel {
 
