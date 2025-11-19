@@ -1,3 +1,5 @@
+<%@page import="in.co.rays.proj4.bean.UserBean"%>
+<%@page import="in.co.rays.proj4.controller.LoginCtl"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -7,9 +9,74 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+		UserBean user = (UserBean) session.getAttribute("user");
+	%>
+	<%
+		if (user != null) {
+	%>
+	<h3>
+		Hi,
+		<%=user.getFirstName()%>
+		(<%=session.getAttribute("role")%>)
+	</h3>
+	<a href="#"><b>My Profile</b></a>
+	<b>|</b>
+	<a href="#"><b>Change Password</b></a>
+	<b>|</b>
+	<a href="#"><b>Get Marksheet</b></a>
+	<b>|</b>
+	<a href="#"><b>Marksheet Merit List</b></a>
+	<b>|</b>
+	<a href="UserCtl"><b>Add User</b></a>
+	<b>|</b>
+	<a href="#"><b>User List</b></a>
+	<b>|</b>
+	<a href="RoleCtl"><b>Add Role</b></a>
+	<b>|</b>
+	<a href="#"><b>Role List</b></a>
+	<b>|</b>
+	<a href="CollegeCtl"><b>Add College</b></a>
+	<b>|</b>
+	<a href="#"><b>College List</b></a>
+	<b>|</b>
+	<a href="StudentCtl"><b>Add Student</b></a>
+	<b>|</b>
+	<a href="#"><b>Student List</b></a>
+	<b>|</b>
+	<a href="MarksheetCtl"><b>Add Marksheet</b></a>
+	<b>|</b>
+	<a href="#"><b>Marksheet List</b></a>
+	<b>|</b>
+	<a href="#"><b>Add Course</b></a>
+	<b>|</b>
+	<a href="#"><b>Course List</b></a>
+	<b>|</b>
+	<a href="#"><b>Add Subject</b></a>
+	<b>|</b>
+	<a href="#"><b>Subject List</b></a>
+	<b>|</b>
+	<a href="#"><b>Add Timetable</b></a>
+	<b>|</b>
+	<a href="#"><b>Timetable List</b></a>
+	<b>|</b>
+	<a href="#"><b>Add Faculty</b></a>
+	<b>|</b>
+	<a href="#"><b>Faculty List</b></a>
+	<b>|</b>
+	<a href="#" target="blank"><b>Java Doc</b></a>
+	<b>|</b>
+	<a href="LoginCtl?operation=<%=LoginCtl.OP_LOG_OUT%>"><b>Logout</b></a>
+	<%
+		} else {
+	%>
 	<h3>Hi, Guest</h3>
 	<a href="WelcomeCtl"><b>Welcome</b></a> |
 	<a href="LoginCtl"><b>Login</b></a>
+	<%
+		}
+	%>
 	<hr>
 </body>
+</html>
 </html>
