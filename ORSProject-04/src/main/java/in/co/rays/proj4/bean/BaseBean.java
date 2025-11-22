@@ -9,6 +9,7 @@ public abstract class BaseBean implements DropdownListBean {
 	protected String modifiedBy ;
 	protected Timestamp createdDatetime;
 	protected Timestamp modifiedDatetime;
+	
 	public long getId() {
 		return id;
 	}

@@ -24,9 +24,9 @@ public class TestRoleModel {
 		// testAdd();
 		 //testUpdate();
 		 //testDelete();
-		// testFindByPk();
+		 testFindByPk();
 		//testFindByName();
-		testSesarch();
+		//testSesarch();
 	}
 
 	public static void testAdd() {

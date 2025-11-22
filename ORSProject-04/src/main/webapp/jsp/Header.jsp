@@ -30,39 +30,39 @@
 	<b>|</b>
 	<a href="UserCtl"><b>Add User</b></a>
 	<b>|</b>
-	<a href="#"><b>User List</b></a>
+	<a href="UserListCtl"><b>User List</b></a>
 	<b>|</b>
 	<a href="RoleCtl"><b>Add Role</b></a>
 	<b>|</b>
-	<a href="#"><b>Role List</b></a>
+	<a href="RoleListCtl"><b>Role List</b></a>
 	<b>|</b>
 	<a href="CollegeCtl"><b>Add College</b></a>
 	<b>|</b>
-	<a href="#"><b>College List</b></a>
+	<a href="CollegeListCtl"><b>College List</b></a>
 	<b>|</b>
 	<a href="StudentCtl"><b>Add Student</b></a>
 	<b>|</b>
-	<a href="#"><b>Student List</b></a>
+	<a href="StudentListCtl"><b>Student List</b></a>
 	<b>|</b>
 	<a href="MarksheetCtl"><b>Add Marksheet</b></a>
 	<b>|</b>
-	<a href="#"><b>Marksheet List</b></a>
+	<a href="MarksheetListCtl"><b>Marksheet List</b></a>
 	<b>|</b>
-	<a href="#"><b>Add Course</b></a>
+	<a href="CourseCtl"><b>Add Course</b></a>
 	<b>|</b>
-	<a href="#"><b>Course List</b></a>
+	<a href="CourseListCtl"><b>Course List</b></a>
 	<b>|</b>
-	<a href="#"><b>Add Subject</b></a>
+	<a href="SubjectCtl"><b>Add Subject</b></a>
 	<b>|</b>
-	<a href="#"><b>Subject List</b></a>
+	<a href="SubjectListCtl"><b>Subject List</b></a>
 	<b>|</b>
 	<a href="#"><b>Add Timetable</b></a>
 	<b>|</b>
 	<a href="#"><b>Timetable List</b></a>
 	<b>|</b>
-	<a href="#"><b>Add Faculty</b></a>
+	<a href="FacultyCtl"><b>Add Faculty</b></a>
 	<b>|</b>
-	<a href="#"><b>Faculty List</b></a>
+	<a href="FacultyListCtl"><b>Faculty List</b></a>
 	<b>|</b>
 	<a href="#" target="blank"><b>Java Doc</b></a>
 	<b>|</b>
