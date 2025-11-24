@@ -1,3 +1,4 @@
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
 <%@page import="in.co.rays.proj4.bean.UserBean"%>
 <%@page import="in.co.rays.proj4.controller.LoginCtl"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -20,13 +21,13 @@
 		<%=user.getFirstName()%>
 		(<%=session.getAttribute("role")%>)
 	</h3>
-	<a href="#"><b>My Profile</b></a>
+	<a href="MyProfileCtl"><b>My Profile</b></a>
 	<b>|</b>
-	<a href="#"><b>Change Password</b></a>
+	<a href="ChangePasswordCtl"><b>Change Password</b></a>
 	<b>|</b>
-	<a href="#"><b>Get Marksheet</b></a>
+	<a href="GetMarksheetCtl"><b>Get Marksheet</b></a>
 	<b>|</b>
-	<a href="#"><b>Marksheet Merit List</b></a>
+	<a href="MarksheetMeritListCtl"><b>Marksheet Merit List</b></a>
 	<b>|</b>
 	<a href="UserCtl"><b>Add User</b></a>
 	<b>|</b>
@@ -56,9 +57,9 @@
 	<b>|</b>
 	<a href="SubjectListCtl"><b>Subject List</b></a>
 	<b>|</b>
-	<a href="#"><b>Add Timetable</b></a>
+	<a href="TimetableCtl"><b>Add Timetable</b></a>
 	<b>|</b>
-	<a href="#"><b>Timetable List</b></a>
+	<a href="TimetableListCtl"><b>Timetable List</b></a>
 	<b>|</b>
 	<a href="FacultyCtl"><b>Add Faculty</b></a>
 	<b>|</b>

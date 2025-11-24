@@ -143,6 +143,20 @@ public class FacultyCtl extends BaseCtl {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		long id = DataUtility.getLong(request.getParameter("id"));
+
+		FacultyModel model = new FacultyModel();
+
+		if (id > 0) {
+			try {
+				FacultyBean bean = model.findByPk(id);
+				ServletUtility.setBean(bean, request);
+			} catch (ApplicationException e) {
+				e.printStackTrace();
+				ServletUtility.handleException(e, request, response);
+				return;
+			}
+		}
 		ServletUtility.forward(getView(), request, response);
 	}
 
@@ -153,6 +167,8 @@ public class FacultyCtl extends BaseCtl {
 		String op = DataUtility.getString(request.getParameter("operation"));
 
 		FacultyModel model = new FacultyModel();
+
+		long id = DataUtility.getLong(request.getParameter("id"));
 
 		if (OP_SAVE.equalsIgnoreCase(op)) {
 
@@ -168,6 +184,25 @@ public class FacultyCtl extends BaseCtl {
 				e.printStackTrace();
 				return;
 			}
+		} else if (OP_UPDATE.equalsIgnoreCase(op)) {
+			FacultyBean bean = (FacultyBean) populateBean(request);
+			try {
+				if (id > 0) {
+					model.update(bean);
+				}
+				ServletUtility.setBean(bean, request);
+				ServletUtility.setSuccessMessage("Faculty updated successfully", request);
+			} catch (DuplicateRecordException e) {
+				ServletUtility.setBean(bean, request);
+				ServletUtility.setErrorMessage("Email already exists", request);
+			} catch (ApplicationException e) {
+				e.printStackTrace();
+				ServletUtility.handleException(e, request, response);
+				return;
+			}
+		} else if (OP_CANCEL.equalsIgnoreCase(op)) {
+			ServletUtility.redirect(ORSView.FACULTY_LIST_CTL, request, response);
+			return;
 		} else if (OP_RESET.equalsIgnoreCase(op)) {
 			ServletUtility.redirect(ORSView.FACULTY_CTL, request, response);
 			return;
