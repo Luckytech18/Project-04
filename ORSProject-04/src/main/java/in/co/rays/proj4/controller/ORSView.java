@@ -86,5 +86,8 @@ public interface ORSView {
 
 	public String ERROR_VIEW = PAGE_FOLDER + "/ErrorView.jsp";
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
+	
+	public String BANK__VIEW = PAGE_FOLDER + "/BankView.jsp";
+	public String BANK_CTL = APP_CONTEXT + "/BankCtl";
 
 }

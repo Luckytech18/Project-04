@@ -68,6 +68,8 @@
 	<a href="#" target="blank"><b>Java Doc</b></a>
 	<b>|</b>
 	<a href="LoginCtl?operation=<%=LoginCtl.OP_LOG_OUT%>"><b>Logout</b></a>
+	<b>|</b>
+	<a href="BankViewCtl"><b>Add Bank</b></a>
 	<%
 		} else {
 	%>
