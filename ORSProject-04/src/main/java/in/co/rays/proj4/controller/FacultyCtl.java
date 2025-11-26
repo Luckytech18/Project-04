@@ -21,7 +21,7 @@ import in.co.rays.proj4.utill.DataValidator;
 import in.co.rays.proj4.utill.PropertyReader;
 import in.co.rays.proj4.utill.ServletUtility;
 
-@WebServlet(name = "FacultyCtl", urlPatterns = { "/FacultyCtl" })
+@WebServlet(name = "FacultyCtl", urlPatterns = { "/ctl/FacultyCtl" })
 public class FacultyCtl extends BaseCtl {
 
 	@Override

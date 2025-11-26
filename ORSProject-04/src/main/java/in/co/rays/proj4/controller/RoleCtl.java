@@ -20,7 +20,7 @@ import in.co.rays.proj4.utill.DataValidator;
 import in.co.rays.proj4.utill.PropertyReader;
 import in.co.rays.proj4.utill.ServletUtility;
 
-@WebServlet(name = "RoleCtl", urlPatterns = { "/RoleCtl" })
+@WebServlet(name = "RoleCtl", urlPatterns = { "/ctl/RoleCtl" })
 public class RoleCtl extends BaseCtl {
 
 	@Override

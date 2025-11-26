@@ -20,7 +20,7 @@ import in.co.rays.proj4.utill.DataUtility;
 import in.co.rays.proj4.utill.PropertyReader;
 import in.co.rays.proj4.utill.ServletUtility;
 
-@WebServlet(name = "TimetableListCtl", urlPatterns = { "/TimetableListCtl" })
+@WebServlet(name = "TimetableListCtl", urlPatterns = { "/ctl/TimetableListCtl" })
 public class TimetableListCtl extends BaseCtl {
 
 	@Override

@@ -20,7 +20,7 @@ import in.co.rays.proj4.utill.DataUtility;
 import in.co.rays.proj4.utill.PropertyReader;
 import in.co.rays.proj4.utill.ServletUtility;
 
-@WebServlet(name = "FacultyListCtl", urlPatterns = { "/FacultyListCtl" })
+@WebServlet(name = "FacultyListCtl", urlPatterns = { "/ctl/FacultyListCtl" })
 public class FacultyListCtl extends BaseCtl {
 	
 	@Override

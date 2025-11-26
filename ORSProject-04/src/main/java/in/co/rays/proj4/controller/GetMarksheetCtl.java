@@ -17,7 +17,7 @@ import in.co.rays.proj4.utill.DataValidator;
 import in.co.rays.proj4.utill.PropertyReader;
 import in.co.rays.proj4.utill.ServletUtility;
 
-@WebServlet(name = "GetMarksheetCtl", urlPatterns = { "/GetMarksheetCtl" })
+@WebServlet(name = "GetMarksheetCtl", urlPatterns = { "/ctl/GetMarksheetCtl" })
 public class GetMarksheetCtl extends BaseCtl {
 
 	@Override

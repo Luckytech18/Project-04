@@ -101,6 +101,17 @@ public class DataUtility {
 			return 0;
 		}
 	}
+	
+	public static double getDouble(String val) {
+	    try {
+	        if (val != null && val.trim().length() > 0) {
+	            return Double.parseDouble(val.trim());
+	        }
+	    } catch (Exception e) {
+	    }
+	    return 0.0;
+	}
+
 
 	public static void main(String[] args) {
 		// Test getString

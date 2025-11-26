@@ -16,7 +16,7 @@ import in.co.rays.proj4.utill.DataUtility;
 import in.co.rays.proj4.utill.PropertyReader;
 import in.co.rays.proj4.utill.ServletUtility;
 
-@WebServlet(name = "MarksheetMeritListCtl", urlPatterns = { "/MarksheetMeritListCtl" })
+@WebServlet(name = "MarksheetMeritListCtl", urlPatterns = { "/ctl/MarksheetMeritListCtl" })
 public class MarksheetMeritListCtl extends BaseCtl {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
