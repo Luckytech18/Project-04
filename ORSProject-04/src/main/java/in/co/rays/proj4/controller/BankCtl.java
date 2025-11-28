@@ -25,39 +25,34 @@ public class BankCtl extends BaseCtl {
 		
 		boolean pass = true;
 		
+		System.out.println("Bank Ki Validate chali");
+		
 		if(DataValidator.isNull(request.getParameter("accountNo"))) {
 			request.setAttribute("accountNo", PropertyReader.getValue("error.require", "accountNo"));
 			pass = false;
+			System.out.println("AccountNo-->" + pass);
 		}
 		if(DataValidator.isNull(request.getParameter("accountHolderName"))) {
 			request.setAttribute("accountHolderName", PropertyReader.getValue("error.require", "accountHolderName"));
 			pass = false;
-		}else if(DataValidator.isName(request.getParameter("accountHolderName"))) {
-			request.setAttribute("accountHolderName", "Invalid Name");
-			pass = false;
+			System.out.println("accountHolderName-->" + pass);
 		}
 		if(DataValidator.isNull(request.getParameter("accountType"))) {
 			request.setAttribute("accountType", PropertyReader.getValue("error.require", "accountType"));
 			pass = false;
+			System.out.println("accountType-->" + pass);
 		}
 		if(DataValidator.isNull(request.getParameter("branch"))) {
 			request.setAttribute("branch", PropertyReader.getValue("error.require", "branch"));
 			pass = false;
+			System.out.println("branch-->" + pass);
 		}
 		if(DataValidator.isNull(request.getParameter("balance"))) {
 			request.setAttribute("balance", PropertyReader.getValue("error.require", "balance"));
 			pass = false;
+			System.out.println("balance-->" + pass);
 		}
-		if(DataValidator.isNull(request.getParameter("phoneNo"))) {
-			request.setAttribute("phoneNo", PropertyReader.getValue("error.require", "phoneNo"));
-			pass = false;
-		}else if(DataValidator.isPhoneLength(request.getParameter("phoneNo"))) {
-			request.setAttribute("phoneNo", PropertyReader.getValue("phoneNo", "Invalid phoneNo Length"));
-			pass = false;
-		}else if(DataValidator.isPhoneNo(request.getParameter("phoneNo"))) {
-			request.setAttribute("phoneNo", PropertyReader.getValue("phoneNo", "Invalid Mobile No"));
-			pass = false;
-		}
+		
 		
 		return pass;
 	}
@@ -66,6 +61,8 @@ public class BankCtl extends BaseCtl {
 	protected BaseBean populateBean(HttpServletRequest request) {
 		
 		BankBean bean = new BankBean();
+		
+		System.out.println("Bank ki Populate chali");
 		
 		bean.setAccountNumber(DataUtility.getString(request.getParameter("accountNo")));
 		bean.setAccountHolderName(DataUtility.getString(request.getParameter("accountHolderName")));
@@ -87,16 +84,20 @@ public class BankCtl extends BaseCtl {
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		System.out.println("Bank ki Do post Chali");
 		BankModel model = new BankModel();
 		BankBean bean = (BankBean)populateBean(request);
+		System.out.println("Bean AccountNAME--->" + bean.getAccountHolderName());
 		try {
 			model.add(bean);
 			ServletUtility.setBean(bean, request);
 			ServletUtility.setSuccessMessage("Bank User Added Successfully", request);
-		} catch (ApplicationException | DuplicateRecordException e) {
+		} catch ( DuplicateRecordException e) {
 			ServletUtility.setBean(bean, request);
 			ServletUtility.setErrorMessage("Account No already exists", request);
+		} catch (ApplicationException e) {
+			e.printStackTrace();
+			return;
 		}
 	}
 	

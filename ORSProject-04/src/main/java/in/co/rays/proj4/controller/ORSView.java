@@ -89,5 +89,7 @@ public interface ORSView {
 	
 	public String BANK__VIEW = PAGE_FOLDER + "/BankView.jsp";
 	public String BANK_CTL = APP_CONTEXT + "/ctl/BankCtl";
+	
+	public String JAVA_DOC = "/ORSProject-04/doc/index.html";
 
 }

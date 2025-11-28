@@ -111,7 +111,16 @@ public class DataUtility {
 	    }
 	    return 0.0;
 	}
+	
+	public static String getDoubleData(Double val) {
+	    if (val != null) {
+	        return val.toString();
+	    } else {
+	        return "";
+	    }
+	}
 
+	
 
 	public static void main(String[] args) {
 		// Test getString

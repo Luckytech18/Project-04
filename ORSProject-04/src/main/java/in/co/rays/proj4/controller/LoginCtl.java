@@ -2,6 +2,7 @@ package in.co.rays.proj4.controller;
 
 import java.io.IOException;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,19 +21,14 @@ import in.co.rays.proj4.utill.PropertyReader;
 import in.co.rays.proj4.utill.ServletUtility;
 
 
-/**
- * @author Lucky Tomar
- *
- */
+
 @WebServlet(name = "LoginCtl", urlPatterns = { "/LoginCtl" })
 public class LoginCtl extends BaseCtl {
 
 	public static final String OP_SIGN_IN = "Sign In";
 	public static final String OP_SIGN_UP = "Sign Up";
 
-	/**
-	 *
-	 */
+	
 	@Override
 	protected boolean validate(HttpServletRequest request) {
 
